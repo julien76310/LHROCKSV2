@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Serif:opsz,wght@8..144,500&display=swap');
-
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 html, body {
   height: 100%;
 }
@@ -18,18 +18,18 @@ h1 {
   font-size: 300%;
   font-weight: 300;
   line-height: 120%;
-  color :rgb(12, 86, 68)
+  color :	rgba(15,75,76,1) ;
 }
 
 .header {
   position:relative;
   text-align:center;
-  background: linear-gradient(60deg, rgb(14, 127, 101) 0%, rgba(0,172,193,1) 100%);
+  background: linear-gradient(60deg, rgb(32, 135, 91) 0%, rgba(129,204,173,1) 100%);
   color:white;
 }
 .logo {
   width:200px;
-  fill:white;
+  fill:black;
   display:inline-block;
   vertical-align: middle;
 }
@@ -129,7 +129,7 @@ h1 {
   background: rgba(19, 161, 138, 1);
 }
 .overlay .content {
-  min-height: 200vh;
+  min-height: 20vh;
 }
 
 .home {
@@ -233,7 +233,7 @@ h1 {
 }
 .home .list-item:hover:after {
   transform: scaleY(1);
-  background: rgba(19, 161, 138, 1);
+  background: rgba(15,75,76,1) 100%;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
 }
 .list-item > * {
@@ -253,7 +253,7 @@ h1 {
   color:white;
 }
 .home .list-item:hover .date {
-  color:rgba(19, 161, 138, 1);
+  color: rgba(15,75,76,1) 100%;
 }
 .list-item .date-day {
   font-size: 32px;
@@ -279,4 +279,58 @@ h1 {
   font-size: 34px;
   line-height: 140%;
   font-family: 'Bebas Neue', sans-serif;
+}
+
+
+/* SOCIAL LINKS HEADER */
+/* Import */
+@import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+/* Basic Reset */
+
+.social .line {
+	position: absolute;
+	top: 0; left: 0px;
+	width: 100%; height: 3px;
+	background: rgb(46, 98, 102) 0%;
+	z-index: 0;
+}
+.social ul {
+	position: fixed;
+  top:0px;
+	right: 5%; 
+  margin:0px;
+	list-style: none;
+	color: #000;
+}
+.social ul li {
+	float: left;
+}
+.social ul li a {
+	position: relative;
+	float: left;
+	background: rgb(46, 98, 102) 0%;
+	width: 48px; height: 48px;
+	text-align: center;
+	color: white;
+	padding: 0 0 10px 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.social ul li a:hover {
+	color: #fff;
+}
+.fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram, .fa-pinterest, .fa-github, .fa-flickr, .fa-linkedin {
+	padding: 10px 0 0 0;
+}
+
+
+/* Hover */
+.social ul li.facebook a:hover {
+	background: rgba(15,75,76,1) 100%;
+}
+.social ul li.instagram a:hover { 
+	background: rgba(15,75,76,1) 100%;
 }
