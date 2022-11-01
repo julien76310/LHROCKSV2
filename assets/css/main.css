@@ -1,17 +1,12 @@
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.noselect {
-  user-select: none;
-  cursor: default;
-}
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Serif:opsz,wght@8..144,500&display=swap');
 
 html, body {
   height: 100%;
   overflow: hidden;
 }
 body {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto Serif', sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #222;
@@ -20,6 +15,7 @@ body {
 }
 
 h1 {
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 300%;
   font-weight: 300;
   line-height: 120%;
@@ -46,7 +42,7 @@ h1 {
   position:relative;
   height:300px;
   width:100%;
-  background:crimson;
+  background: rgba(19, 161, 138, 1);
 }
 .overlay .content {
   min-height: 200vh;
@@ -99,7 +95,7 @@ h1 {
   right: 0;
   margin: 0;
   border-radius: 0;
-  background: crimson;
+  background: rgba(19, 161, 138, 1);
   transition: 0.6s all !important;
   z-index: 2;
 }
@@ -153,7 +149,7 @@ h1 {
 }
 .home .list-item:hover:after {
   transform: scaleY(1);
-  background: crimson;
+  background: rgba(19, 161, 138, 1);
   box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
 }
 .list-item > * {
@@ -171,7 +167,7 @@ h1 {
   color:white;
 }
 .home .list-item:hover .date {
-  color:crimson;
+  color:rgba(19, 161, 138, 1);
 }
 .list-item .date-day {
   font-size: 30px;
@@ -179,6 +175,7 @@ h1 {
 .list-item .info {
   padding:20px;
   margin-left:-20px;
+  
 }
 .home .list-item:hover .info,
 .overlay .list-item .info {
