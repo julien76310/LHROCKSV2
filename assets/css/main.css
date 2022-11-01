@@ -162,6 +162,8 @@ h1 {
   padding-right: 10%;
   box-sizing: border-box;
   text-align:center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
 }
 .overlay .list-item .date {
   color:white;
@@ -170,11 +172,14 @@ h1 {
   color:rgba(19, 161, 138, 1);
 }
 .list-item .date-day {
-  font-size: 30px;
+  font-size: 32px;
+  line-height: 140%;
+  font-family: 'Bebas Neue', sans-serif;
 }
 .list-item .info {
   padding:20px;
   margin-left:-20px;
+  font-size: 14px;
   
 }
 .home .list-item:hover .info,
@@ -183,10 +188,11 @@ h1 {
   transition: 0.3s all;
 }
 .list-item .info-time {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 6px;
 }
 .list-item .info-title {
-  font-size: 24px;
+  font-size: 34px;
   line-height: 140%;
+  font-family: 'Bebas Neue', sans-serif;
 }
