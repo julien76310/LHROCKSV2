@@ -125,8 +125,8 @@
   <!-- Dependencies -->
   <script src="assets/js/jquery-3.2.1.js"  crossorigin="anonymous"></script>
   <script>
-    var mykey = 'AIzaSyBVkwW3dXzeGVTf1OYLhl36RX_nI3dYATY'; // typically like Gtg-rtZdsreUr_fLfhgPfgff
-var calendarid = 'lhrocks76@gmail.com'; // will look somewhat like 3ruy234vodf6hf4sdf5sd84f@group.calendar.google.com
+    var mykey = process.env.GOOGLEAPIKEY; 
+    var calendarid = 'lhrocks76@gmail.com'; // will look somewhat like 3ruy234vodf6hf4sdf5sd84f@group.calendar.google.com
 
 $.ajax({
 type: 'GET',
