@@ -125,22 +125,12 @@
   <!-- Dependencies -->
   <script src="assets/js/jquery-3.2.1.js"  crossorigin="anonymous"></script>
   <script>
-    var request  = require('dotenv').config();
-
-    var main = function() {
-
-      var myAPIKey = process.env.GOOGLEAPIKEY;
-      
-      var url = 'https://externalapi.service.com/v1/query?key=' + myAPIKey;
-      
-      return request(url);
-    };
-    //var mykey = process.env.GOOGLEAPIKEY; 
+    var mykey = 'AIzaSyBVkwW3dXzeGVTf1OYLhl36RX_nI3dYATY'; // typically like Gtg-rtZdsreUr_fLfhgPfgff
     var calendarid = 'lhrocks76@gmail.com'; // will look somewhat like 3ruy234vodf6hf4sdf5sd84f@group.calendar.google.com
 
 $.ajax({
 type: 'GET',
-url: encodeURI('https://www.googleapis.com/calendar/v3/calendars/' + calendarid+ '/events?key=' + myAPIKey),
+url: encodeURI('https://www.googleapis.com/calendar/v3/calendars/' + calendarid+ '/events?key=' + mykey),
 dataType: 'json',
 success: function (response) {
 console.log(response)
