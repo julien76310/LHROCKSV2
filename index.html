@@ -129,7 +129,7 @@
 
     var main = function() {
 
-      var mykey = process.env.GOOGLEAPIKEY;
+      var myAPIKey = process.env.GOOGLEAPIKEY;
       
       var url = 'https://externalapi.service.com/v1/query?key=' + myAPIKey;
       
@@ -140,7 +140,7 @@
 
 $.ajax({
 type: 'GET',
-url: encodeURI('https://www.googleapis.com/calendar/v3/calendars/' + calendarid+ '/events?key=' + mykey),
+url: encodeURI('https://www.googleapis.com/calendar/v3/calendars/' + calendarid+ '/events?key=' + myAPIKey),
 dataType: 'json',
 success: function (response) {
 console.log(response)
