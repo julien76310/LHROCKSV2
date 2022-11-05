@@ -125,7 +125,17 @@
   <!-- Dependencies -->
   <script src="assets/js/jquery-3.2.1.js"  crossorigin="anonymous"></script>
   <script>
-    var mykey = process.env.GOOGLEAPIKEY; 
+    var request  = require('request-promise');
+
+    var main = function() {
+
+      var mykey = process.env.GOOGLEAPIKEY;
+      
+      var url = 'https://externalapi.service.com/v1/query?key=' + myAPIKey;
+      
+      return request(url);
+    };
+    //var mykey = process.env.GOOGLEAPIKEY; 
     var calendarid = 'lhrocks76@gmail.com'; // will look somewhat like 3ruy234vodf6hf4sdf5sd84f@group.calendar.google.com
 
 $.ajax({
