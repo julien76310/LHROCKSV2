@@ -133,7 +133,7 @@ type: 'GET',
 url: encodeURI('https://www.googleapis.com/calendar/v3/calendars/' + calendarid+ '/events?key=' + mykey),
 dataType: 'json',
 success: function (response) {
-alert(response)
+console.log(response)
 },
 error: function (response) {
 alert(response)
