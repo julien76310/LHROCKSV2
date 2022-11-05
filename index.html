@@ -121,26 +121,32 @@
             </div>
           </div>
           <script>
-            window.fbAsyncInit = function() {
-              FB.init({
-                appId      : '504367835067183',
-                cookie     : true,
-                xfbml      : true,
-                version    : 'v15'
-              });
-                
-              FB.AppEvents.logPageView();   
-                
-            };
-          
-            (function(d, s, id){
-               var js, fjs = d.getElementsByTagName(s)[0];
-               if (d.getElementById(id)) {return;}
-               js = d.createElement(s); js.id = id;
-               js.src = "https://connect.facebook.net/en_US/sdk.js";
-               fjs.parentNode.insertBefore(js, fjs);
-             }(document, 'script', 'facebook-jssdk'));
+            var graphURL = "https://graph.facebook.com/305705965791/events/?fields=id,name,owner,type&time_filter=past";
+        
+            // Use JSONP to call the Graph API
+            function loadPosts() {
+              var script = document.createElement("script");
+              script.src = graphURL;
+              document.body.appendChild(script);
+            }
+        
+            function processResult(posts) {
+              if (posts.paging == undefined) {
+                document.getElementById("loadMore").innerHTML =
+                  "No more results";
+              }
+              else {
+                graphURL = posts.paging.next;
+                for (var post in posts.data) {
+                  var message = document.createElement("div");
+                  message.innerHTML = posts.data[post].message;
+                  document.getElementById("content").appendChild(message);
+                }
+              }
+            }
           </script>
+          <div id="content"></div>
+          <button id="loadMore" onclick="loadPosts()">Load more</button>
     </div>
     <footer class="content flex">
         <p>By Roulio | Automatically feeded by Facebook Graph API </p>
@@ -149,7 +155,7 @@
   </script>
   
   <!-- Dependencies -->
-  <script src="assets/js/jquery-3.2.1.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="assets/js/jquery-3.2.1.js"  crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/js/TweenMax.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="assets/js/swiper.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="assets/js/classList.min.js" charset="utf-8"></script>
