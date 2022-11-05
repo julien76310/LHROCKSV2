@@ -120,31 +120,32 @@
               <div class="swiper-scrollbar"></div>
             </div>
           </div>
-          <script>
-            var mykey = 'AIzaSyBVkwW3dXzeGVTf1OYLhl36RX_nI3dYATY'; // typically like Gtg-rtZdsreUr_fLfhgPfgff
-var calendarid = 'bGhyb2Nrczc2QGdtYWlsLmNvbQf@group.calendar.google.com'; // will look somewhat like 3ruy234vodf6hf4sdf5sd84f@group.calendar.google.com
-
-$.ajax({
-    type: 'GET',
-    url: encodeURI('https://www.googleapis.com/calendar/v3/calendars/' + calendarid+ '/events?key=' + mykey),
-    dataType: 'json',
-    success: function (response) {
-        alert(response)
-    },
-    error: function (response) {
-      alert(response)
-    }
-});
-          </script>
-   
-    <footer class="content flex">
-        <p>By Roulio | Automatically feeded by Google Calendar / Facebook Graph API </p>
-    </footer>
-  
-  </script>
+        
 
   <!-- Dependencies -->
   <script src="assets/js/jquery-3.2.1.js"  crossorigin="anonymous"></script>
+  <script>
+    var mykey = 'AIzaSyBVkwW3dXzeGVTf1OYLhl36RX_nI3dYATY'; // typically like Gtg-rtZdsreUr_fLfhgPfgff
+var calendarid = 'bGhyb2Nrczc2QGdtYWlsLmNvbQf@group.calendar.google.com'; // will look somewhat like 3ruy234vodf6hf4sdf5sd84f@group.calendar.google.com
+
+$.ajax({
+type: 'GET',
+url: encodeURI('https://www.googleapis.com/calendar/v3/calendars/' + calendarid+ '/events?key=' + mykey),
+dataType: 'json',
+success: function (response) {
+alert(response)
+},
+error: function (response) {
+alert(response)
+}
+});
+  </script>
+
+<footer class="content flex">
+<p>By Roulio | Automatically feeded by Google Calendar / Facebook Graph API </p>
+</footer>
+
+</script>
   <script type="text/javascript" src="assets/js/TweenMax.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="assets/js/swiper.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="assets/js/classList.min.js" charset="utf-8"></script>
