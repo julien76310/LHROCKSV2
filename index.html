@@ -79,7 +79,7 @@
                   <div class="events">
                     <h1>Les concerts à venir</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta diam non sapien fermentum, non facilisis arcu auctor. Sed quis mattis ipsum, a malesuada odio.</p>
-                    <div class="list">
+                    <div id="list_events" class="list">
                       <div class="list-item">
                         <div class="date">
                           <div class="date-day">8</div>
@@ -125,7 +125,7 @@
   <!-- Dependencies -->
   <script src="assets/js/jquery-3.2.1.js"  crossorigin="anonymous"></script>
   <script>
-    var request  = require('request-promise');
+    var request  = require('dotenv').config();
 
     var main = function() {
 

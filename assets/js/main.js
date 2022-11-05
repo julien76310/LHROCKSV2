@@ -52,3 +52,6 @@ var swiperHome = new Swiper(".swiper-container.home", {
 function resetmoved() {
   moved = false;
 }
+
+var la_liste = $('#list_events').append("div");
+la_liste.attr("id","item1");
